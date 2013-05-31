@@ -1,0 +1,40 @@
+this is the latest version
+sequence:
+1>first:add proxy(based on the need to add or don't add proxy)
+sudo gedit /etc/apt/apt.conf
+Acquire::http::proxy "http://proxy-prc.intel.com:911";
+2>based on the nedd to modify the gitconfig and ssh_config files context
+3>update our environmet, you can cd env/config/bin_script,use update "sudo
+./update".
+4>enter env/config/bin_script folder, make soft linker default-->arm-none-2010
+ln -s arm-none-2010  default
+4>sudo python sudo.py(install our software)
+5>python do.py(configure  software environmet)
+6>sudo ptyhon sudo_env.py(configure some software environment, need root
+authority,for now configure nfs and tftp )
+
+Note:
+2013.5.15 support tftp nfs configuration function
+2013.5.18 support generate ssh key and confiure ssh configure to support git
+server.
+2013.5.18.support sambo configure
+2013.5.20.support  auto add network agent and auto update
+---------------------
+new sequence:
+1>sudo python prepare.py //add netwok agency and update
+2>bashed on the need to modify the gitconfgiure , ssh_config and config.py files context
+3>sudo   python sudo.py(install our software)
+4>python do.py (configure software environment)
+5>sudo   python sudo_env.py(configure some software environment and reset 
+services, need rott authority, for now configure nfs,nftp,sambo)
+-----------------------------------2013.5.12------------------
+add Makefile implement make all can run all steps
+we only bashed on the need to modify the gitconfgiure , ssh_config and config.py
+files contextb before table make all.
+1. read init/README and config/README 
+2. make all run all software install and configure software environment
+Note:
+1>you must note in config folder gitconfig and ssh_config files and init folder
+config.py file context.
+2>if you want to your program as the shell command, you can mov your execute
+program to ~/bin folder

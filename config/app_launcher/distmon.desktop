@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[en_GB]=/usr/share/distcc/distccmon-gnome-icon.png
+Name[en_GB]=distccmon
+Exec=distccmon-gnome
+Name=distcc monitor
+Icon=/usr/share/distcc/distccmon-gnome-icon.png

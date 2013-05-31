@@ -1,0 +1,6 @@
+1.tftp    ------>/etc/xinted.d/ (tftp)
+2.ssh_config : modify git server name  and gmail address(according to config.py
+EMAIL) based on your need.
+3.gitconfig :modify gamil address based on your need.
+
+

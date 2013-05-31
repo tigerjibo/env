@@ -1,0 +1,7 @@
+SF=`pwd`
+echo "source `pwd`/bashrc" >> ~/.bashrc
+echo 'if [ -e $HOME/.dir_colors ] ; then eval `dircolors ~/.dir_colors` ; fi' >> ~/.bashrc
+cd ~
+ln -s $SF/vimrc .vimrc
+ln -s $SF/dir_colors .dir_colors
+echo "Done."

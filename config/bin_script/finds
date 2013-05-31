@@ -1,0 +1,1 @@
+find . -name "$1" | xargs grep $2 | less

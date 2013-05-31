@@ -1,0 +1,9 @@
+[color]
+        ui = auto
+[user]
+        name = Ji Bo
+        email = jibo.tiger@gmail.com
+[core]
+        editor = vim
+
+[http]

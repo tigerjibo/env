@@ -1,0 +1,15 @@
+Before running the script, below steps are mandatory and need to
+be executed manually:
+
+0. Add proxy settings in /etc/apt/apt.conf
+1. sudo apt-get update
+2. sudo apt-get upgrade
+------------------------------------
+In config.py files:
+CONFIG: will clone env folder configer files to CONFIG folder name.
+EMBED_WORK: use mount to pc and embbed board folder name.
+EMAIL: use generate to ssh key. The Email address must be identical to gitconfig
+email address and ssh_configure email address
+----------------------------------------------------------
+add init_reset_env.py support reset tftp, nfs,sambo server
+add  prepare.py support auto add network agent and auto update

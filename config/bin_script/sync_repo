@@ -1,0 +1,84 @@
+#!/usr/bin/python
+import os
+import sys
+import logging
+from commands import getstatusoutput as run_cmd
+
+log = logging.getLogger('main')
+
+class CANNOT_CREATE_DIR(Exception):
+        def __init__(self, target):
+                Exception.__init__(self, target)
+                self.target = target
+
+def validate_config_item(s):
+        s = s.split(' ')
+        if len(s) == 2:
+                return True
+        else:
+                return False
+
+def parse_config(file_name):
+        fd = open(file_name, 'r')
+        s = fd.readlines()
+        rlist = []
+        # validate content
+        for i in s:
+                if validate_config_item(i):
+                        i = i.split(' ')
+                        j = [m.strip() for m in i]
+                        rlist.append(j)
+        return rlist
+
+def check_repo_dir(config_path, repo_path, root, f):
+        root_split = root
+        tail_list = [f]
+        while (root_split != config_path):
+                head, tail = root.split()
+                root_split = head
+                tail_list.insert(0, tail)
+
+        target = os.path.join(repo_path, *tail_list)
+
+        if os.path.isdir(target):
+                return target
+        elif os.path.isfile(target):
+                raise CANNOT_CREATE_DIR(target)
+        else:
+                os.makedirs(target, mode=0755)
+                return target
+
+def handle_cmd_run(s,o):
+        if s == 0:
+                log.debug(o)
+                return
+        else:
+                print(s,o)
+                sys.exit(-1)
+
+def do_sync(config_path, repo_path, root, f, rlist):
+        target = check_repo_dir(config_path, repo_path, root, f)
+        for name, url in rlist:
+                repo_p = os.path.join(target, name)
+                if os.path.isdir(repo_p):
+                        cmd = "(cd %s; git pull)" % repo_p
+                        log.info(cmd)
+                        s,o = run_cmd(cmd)
+                        handle_cmd_run(s,0)
+                elif os.path.isfile(repo_p):
+                        raise CANNOT_CREATE_DIR(repo_p)
+                else:
+                        cmd = "(cd %s; git clone %s %s)" % (target, url, name)
+                        log.info(cmd)
+                        s,o = run_cmd(cmd)
+                        handle_cmd_run(s,o)
+
+def sync_repos(config_path, repo_path):
+        for root, dirs, files in os.walk(config_path):
+                for f in files:
+                        rlist = parse_config(os.path.join(root, f))
+                        do_sync(config_path, repo_path, root, f, rlist)
+
+
+logging.basicConfig(level=logging.INFO)
+sync_repos(sys.argv[1], sys.argv[2])
