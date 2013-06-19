@@ -1,12 +1,13 @@
 
 Host cvlinux
 User boji
-Hostname cvlinux.xa.intel.com
+Hostname cvlinux.xa.com
 Port  29418
-IdentityFile ~/.ssh/bo.ji@intel.com
+IdentityFile ~/.ssh/jibo.tiger@gmail.com
 
 Host gitserv-gerrit
 User boji
-Hostname  gitserv.nc.intel.com
+Hostname  gitserv.nc.com
 Port  29418
-IdentityFile ~/.ssh/bo.ji@intel.com
+IdentityFile ~/.ssh/jibo.tiger@gmail.com
+
