@@ -2,7 +2,7 @@ import os
 from os.path import join as pjoin
 from handle_error import handle
 from commands import getstatusoutput as getso
-
+from config   import HOST_NAME 
 def reset_tftp():
     print 'reset tftp server...\n'
     s,o = getso("/etc/init.d/xinetd reload")
@@ -19,7 +19,7 @@ def reset_nfs():
 
 def reset_sambo():
     print 'input sambo passwd..\n'
-    s,o = getso("smbpasswd -a jibo")
+    s,o = getso("smbpasswd -a %s" %HOST_NAME)
     handle(s,o)
     print 'reset samba server...'
     s,o = getso("service smbd restart")
