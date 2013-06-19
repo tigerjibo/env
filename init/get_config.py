@@ -14,7 +14,7 @@ def check_dir():
         return
 
 def clone_config():
-    s,o = getso("git clone %s %s" % (ENV_URL, BASE))
+    s,o = getso("cp -rf %s/* %s" % (ENV_URL, BASE))
     handle(s,o)
 
 def generate_sshkey():
