@@ -10,6 +10,7 @@ tftp-hpa
 tftpd-hpa
 xinetd
 openssh-server
+openssh-client
 libncurses5
 libncurses5-dev
 scons
