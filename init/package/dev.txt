@@ -9,6 +9,7 @@ minicom
 tftp-hpa
 tftpd-hpa
 xinetd
+nfs-kernel-server
 openssh-server
 openssh-client
 libncurses5
