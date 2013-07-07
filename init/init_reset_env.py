@@ -7,14 +7,14 @@ def reset_tftp():
     print 'reset tftp server...\n'
     s,o = getso("/etc/init.d/xinetd reload")
     handle(s,o)
-    s,o = getso("/etc/init.d/xinetd restart")
+    s,o = getso("service xinetd restart")
     handle(s,o)
 
 def reset_nfs():
     print 'reset nfs server...\n'
     s,o = getso("exportfs -rv")
     handle(s,o)
-    s,o = getso("/etc/init.d/nfs-kernel-server restart")
+    s,o = getso("service nfs-kernel-server restart")
     handle(s,o)
 
 def reset_sambo():
