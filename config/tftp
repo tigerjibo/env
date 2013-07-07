@@ -6,7 +6,8 @@ disable = no
 user = root
 protocol = udp
 server = /usr/sbin/in.tftpd
-server_args = -s/home/tftpboot
-log_on_success += PID HOST DURATION
-log_on_failure +=HOST
+server_args = -s /tftpboot
+per_source = 11
+cps =1002
+flags = IPv4
 }
