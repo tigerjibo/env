@@ -29,10 +29,13 @@ new sequence:
 services, need rott authority, for now configure nfs,nftp,sambo)
 -----------------------------------2013.5.12------------------
 add Makefile implement make all can run all steps
-we only bashed on the need to modify the gitconfgiure , ssh_config and config.py
-files contextb before table make all.
-1. read init/README and config/README 
-2. make all run all software install and configure software environment
+How to do?
+Setp1:
+we only need to modify the config/gitconfgiure,config/ssh_config and
+init/config.py  based on your environment.
+Setp2
+cd env/init 
+make all 
 Note:
 1>you must note in config folder gitconfig and ssh_config files and init folder
 config.py file context.
