@@ -1,0 +1,4 @@
+export PATH=$PATH:$DSP_PATH/tools/CodeSourcery/Sourcery_G++_Lite/bin:$PATH
+export CROSS_COMPILE=arm-none-linux-gnueabi-
+export ARCH=arm
+
