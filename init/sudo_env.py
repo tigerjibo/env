@@ -9,7 +9,7 @@ do_list = [
 
 n = 0
 for item in do_list:
-    sys.stdout.write("Running %s ... " % item)
+    sys.stdout.write("Running %s ... \n" % item)
     sys.stdout.flush()
     exec ("%s = __import__('%s')" % (item, item))
     try:

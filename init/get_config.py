@@ -18,7 +18,7 @@ def clone_config():
     handle(s,o)
 
 def generate_sshkey():
-    print 'configure ssh-key'
+    print 'configure ssh-key...\n'
     s,o = getso("ssh-keygen -t dsa -C %s -f ~/.ssh/%s"  %(EMAIL,EMAIL))
     handle(s,o)
 
