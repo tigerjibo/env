@@ -15,9 +15,11 @@ def setup_dircolor():
 
 def setup_vim():
     os.symlink(pjoin(BASE,'vimrc'), pjoin(HOME,'.vimrc')) 
+    os.symlink(pjoin(BASE,'ctags_javascript'), pjoin(HOME,'.ctags'))
     os.mkdir(pjoin(HOME,".vim"))
     os.symlink(pjoin(BASE, "vim_plugin"), pjoin(HOME, ".vim", "plugin"))
-    
+    os.symlink(pjoin(BASE, "vim_syntax"), pjoin(HOME, ".vim", "syntax"))
+
 def setup_git():
     os.symlink(pjoin(BASE, 'gitconfig'), pjoin(HOME, '.gitconfig'))
 
