@@ -16,6 +16,9 @@ let c_syntax_for_h=1
 let b:javascript_fold=1
 au BufNewFile,BufRead *.jsm set filetype=javascript
 au BufNewFile,BufRead *.bld set filetype=javascript
+au BufNewFile,BufRead *.xdc set filetype=javascript
+au BufNewFile,BufRead *.cfg set filetype=javascript
+au BufNewFile,BufRead *.xs set filetype=javascript
 "taglist support javascript
 let g:tlist_javascript_settings = 'javascript;s:string;a:array;o:object;f:function;m:member'
 syntax on
