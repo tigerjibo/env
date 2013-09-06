@@ -33,3 +33,4 @@ bison
 gperf
 samba
 samba-common
+g++
