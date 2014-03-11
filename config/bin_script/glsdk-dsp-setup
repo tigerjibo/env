@@ -1,0 +1,10 @@
+#dsp-develp-path
+export DSP_PATH=~/DSP
+#ipc
+export DEPOT=${DSP_PATH}/ti-glsdk_dra7xx-evm_6_03_00_01
+#dsp toolchain
+source ~/bin/glsdk-arm-dsp-eabi
+#dsp xdc tool
+source ~/bin/glsdk-arm-dsp-xdc
+
+

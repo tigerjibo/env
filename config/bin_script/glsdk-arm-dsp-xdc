@@ -1,0 +1,12 @@
+export KERNEL_INSTALL_DIR=${DEPOT}/board-support/linux
+export XDC_INSTALL_DIR=${DEPOT}/component-sources/xdctools_3_25_04_88
+export BIOS_INSTALL_DIR=${DEPOT}/component-sources/bios_6_35_03_47
+export BIOSTOOLSROOT=${DSP_PATH}/ti-glsdk_dra7xx-evm_6_03_00_01/component-sources
+export IPCSRC=$BIOSTOOLSROOT/ipc_3_20_00_06
+export C66XCGTOOLSPATH=$BIOSTOOLSROOT/../ti-devkit/cgt6x_7_4_2
+export HWVERSION=ES10
+export DSP_DEVKIT_PATH=${DSP_PATH}/glsdk/ti-devkit
+export CODEGEN_PATH=${DSP_DEVKIT_PATH}/cgt470_5_0_1
+export XDCTOOLS_PATH=${DSP_PATH}/glsdk/component-sources/xdctools_3_25_02_70
+export PATH="${PATH}:${CODEGEN_PATH}/bin:${XDCTOOLS_PATH}:${XDCTOOLS_PATH}/bin"
+export XDCPATH="${XDCPATH}"

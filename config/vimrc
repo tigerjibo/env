@@ -33,4 +33,5 @@ autocmd FileType python set textwidth=150
 autocmd FileType python set tabstop=4
 autocmd FileType python set shiftwidth=4
 autocmd FileType python set softtabstop=4
-
+"resolve messy code
+set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936
