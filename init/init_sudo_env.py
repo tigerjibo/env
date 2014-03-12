@@ -1,11 +1,17 @@
 import shutil
 import os
 from os.path import join as pjoin
-from config import HOME, BASE, CONFIG, ENV_URL,EMBED_WORK,HOST_NAME
+from config import HOME, BASE, CONFIG, ENV_URL,EMBED_WORK,HOST_NAME,TFTP_DIR
 
 
 def setup_tftp():
     shutil.copy(pjoin(BASE, 'tftp'),'/etc/xinetd.d/tftp')
+    if os.path.exists(TFTP_DIR):
+        
+    else:
+        os.mkdir(TFTP_DIR)
+        s,o = getso("chmod 777 -R %s" % TFTP_DIR)
+
 
 def setup_export():
     fd = open('/etc/exports', 'a')
