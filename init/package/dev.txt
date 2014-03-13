@@ -1,5 +1,6 @@
 vim
 git
+subversion
 ctags
 cscope
 gitk
