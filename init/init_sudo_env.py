@@ -1,7 +1,7 @@
 import shutil
 import os
 from os.path import join as pjoin
-from config import HOME, BASE, CONFIG, ENV_URL,EMBED_WORK,HOST_NAME,TFTP_DIR
+from config import HOME, BASE, CONFIG, ENV_URL,EMBED_WORK,HOST_NAME,TFTP_DIR,ANDROID_IP
 
 
 #添加google域名解析
