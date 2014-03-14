@@ -14,4 +14,5 @@ env:
 	@echo "Configure Software Environment.."
 	python do.py
 	sudo python sudo_env.py
-
+clean:
+	rm -rf *.pyc
