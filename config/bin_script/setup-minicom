@@ -1,7 +1,6 @@
 #!/bin/sh
 
 cwd=`dirname $0`
-. $cwd/common.sh
 
 
 minicomcfg=${HOME}/.minirc.dfl
