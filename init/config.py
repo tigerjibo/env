@@ -12,5 +12,7 @@ EMBED_WORK = 'Embbed_work'
 TFTP_DIR = '/tftpboot'
 #use to generate ssh public key
 EMAIL = 'jibo.tiger@gmail.com'
+#use to resolve goole and android ip address
+ANDRODI_IP = 203.208.46.172 
 #NET_AGENCY is network agency, According to individual needs to add or don't add
 NET_AGENCY = ' '
