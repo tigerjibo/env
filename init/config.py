@@ -2,7 +2,7 @@ import os
 #PROJECT_FOLDER is the project folder name
 PROJECT_FOLDER = 'env'
 HOME = os.environ['HOME']
-HOST_NAME =  (HOME.split('/'))[1]
+HOST_NAME =  (HOME.split('/'))[2]
 CONFIG = 'ED_Linux'
 BASE = os.path.join(HOME, CONFIG)
 ENV_URL = os.path.join(HOME,PROJECT_FOLDER,'config')
